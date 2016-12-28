@@ -40,11 +40,13 @@
 
 	<Cols>
 		<!--<C Name='taskid' Type='Text' Hidden="1" Visible="0"/>-->
+		<C Name='taskNumber' Type='Int' CanEmpty="1" EmptyValue=""/>
 		<C Name='taskname' Type='Text' Width="200"/>
 		<C Name='taskstate' Type='Text' ClassFormula="'task-state ' + getTaskStateStyleClass(Value, taskduedate)" />
 		<!--<C Name='tasktype' Type='Text' Hidden="1" Visible="0"/>-->
 		<!--<C Name='taskprocessid' Type='Text' Hidden="1" Visible="0"/>-->
 		<C Name='taskprocessname' Type='Text'/>
+		<C Name='taskprocessstartdate' Type='Date' Format="dd/MM/yyyy" Width="100" />
 		<C Name='taskactors' Type='Text'/>
 		<!--<C Name='taskinitiatorid' Type='Text' Hidden="1" Visible="0"/>-->
 		<!--<C Name='taskinitiatorname' Type='Text' Hidden="1" Visible="0"/>-->
@@ -68,7 +70,9 @@
 
 	<Header taskname="Tache"
 			taskstate="Etat"
+			taskNumber="#"
 			taskprocessname="Workflow"
+			taskprocessstartdate="Workflow démarré le"
 			taskactors="Intervenants"
 			taskinitiatorname="Intervenant"
 			tasktargetdocumentcode="Code article"
@@ -90,8 +94,10 @@
 	<Def>
 		<!-- Default row for group rows -->
 		<!-- tasktargetdocumentcodeFormula="&quot;count = &quot;+count()" -->
-		<D Name='Group' Height="30" Expanded="1" tasknameFormula="&quot;Nombre de taches : &quot;+count()" tasknameHtmlPrefix="<div style='padding-top: 5px; font-size: 1.2em; font-weight: bold;'>" tasknameHtmlPostfix="</div>" CalcOrder="taskname, tasknameHtmlPrefix" Calculated="1" />
-		<D Name="task"  taskdurationFormula="getDurationInDays(taskstartdate,taskenddate)" Calculated="1" CalcOrder="taskduration,taskstateClass" /> <!-- Calculated="1" CalcOrder="taskstate" taskstateBackground="#8F8"/>-->
+		<D Name='Group' Height="30" Expanded="1"
+	 		taskNumberFormula="count()" taskNumberHtmlPrefix="<div style='font-weight: bold; color: #40a7c4'>" taskNumberHtmlPostfix="</div>"
+	    CalcOrder="taskname,taskNumber"
+	 Calculated="1" /><D Name="task"  taskdurationFormula="getDurationInDays(taskstartdate,taskenddate)" Calculated="1" CalcOrder="taskduration,taskstateClass" /> <!-- Calculated="1" CalcOrder="taskstate" taskstateBackground="#8F8"/>-->
 	</Def>
 
 </Grid>

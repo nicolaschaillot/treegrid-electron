@@ -12,7 +12,8 @@
 
 	<Head>
 		<Filter id="Filter1" Height="30"
-				taskstateRange="1" taskstateShowMenu="0" taskstateButton="Defaults" taskstateDefaults="|*FilterOff|*RowsAll"
+				taskstate="opened" taskstateFilter="1" taskstateRange="1" taskstateShowMenu="0" taskstateButton="Defaults" taskstateDefaults="|*FilterOff|*RowsAll"
+				taskprocessname="PIM LAB - Création UC" taskprocessnameFilter="1" taskprocessnameShowMenu="0" taskprocessnameButton="Defaults" taskprocessnameDefaults="|*FilterOff|*RowsAll"
 				tasktargetdocumenttradeunitRange="1" tasktargetdocumenttradeunitShowMenu="0" tasktargetdocumenttradeunitButton="Defaults" tasktargetdocumenttradeunitDefaults="|*FilterOff|*RowsAll"
 				tasktargetdocumentfamilyRange="1" tasktargetdocumentfamilyShowMenu="0" tasktargetdocumentfamilyButton="Defaults" tasktargetdocumentfamilyDefaults="|*FilterOff|*RowsAll"
 				tasktargetdocumentglnRange="1" tasktargetdocumentglnShowMenu="0" tasktargetdocumentglnButton="Defaults" tasktargetdocumentglnDefaults="|*FilterOff|*RowsAll"
@@ -22,7 +23,11 @@
 	</Head>
 
 	<Solid>
-		<Group Cells="List,Custom" ListWidth="165" ListCustom="unknown" List="|none|&lt;b&gt;Code article&lt;/b&gt;|&lt;b&gt;Workflow&lt;/b&gt;|&lt;b&gt;Tâche&lt;/b&gt;|&lt;b&gt;Intervenant&lt;/b&gt;" Cols="||tasktargetdocumentcode|taskprocessname|taskname|taskactors" />
+		<Group Cells="List,Custom"
+			     ListWidth="165"
+					 ListCustom="unknown"
+					 List="|none|&lt;b&gt;Code article&lt;/b&gt;|&lt;b&gt;Workflow&lt;/b&gt;|&lt;b&gt;Tâche&lt;/b&gt;|&lt;b&gt;Intervenant&lt;/b&gt;"
+					 Cols="||tasktargetdocumentcode|taskprocessname|taskname|taskactors" />
 		<Tabber Cells="WF0,WF1,WF2,WF3"
 				WF0ButtonText="Tous les workflows" WF0OnCheck="Grid.SetFilter('taskprocessnameFilter');" WF0="1"
 				WF1ButtonText="CREATION" WF1OnCheck="Grid.FilterTextRange('taskprocessname','PIM LAB - Création UC','taskprocessnameFilter');"

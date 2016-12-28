@@ -22,7 +22,7 @@
 	</Head>
 
 	<Solid>
-		<Group Cells="List,Custom" ListWidth="165" ListCustom="unknown" List="|none|&lt;b&gt;Code article&lt;/b&gt;|&lt;b&gt;Workflow&lt;/b&gt;|&lt;b&gt;Tâche&lt;/b&gt;|&lt;b&gt;Intervenant&lt;/b&gt;" Cols="||tasktargetdocumentcode|taskprocessname|taskname|taskinitiatorname" />
+		<Group Cells="List,Custom" ListWidth="165" ListCustom="unknown" List="|none|&lt;b&gt;Code article&lt;/b&gt;|&lt;b&gt;Workflow&lt;/b&gt;|&lt;b&gt;Tâche&lt;/b&gt;|&lt;b&gt;Intervenant&lt;/b&gt;" Cols="||tasktargetdocumentcode|taskprocessname|taskname|taskactors" />
 		<Tabber Cells="WF0,WF1,WF2,WF3"
 				WF0ButtonText="Tous les workflows" WF0OnCheck="Grid.SetFilter('taskprocessnameFilter');" WF0="1"
 				WF1ButtonText="CREATION" WF1OnCheck="Grid.FilterTextRange('taskprocessname','PIM LAB - Création UC','taskprocessnameFilter');"

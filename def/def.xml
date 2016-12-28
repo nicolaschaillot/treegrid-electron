@@ -11,7 +11,7 @@
 	<Cfg PersistentCfg="1" />
 
 	<Head>
-		<Filter id="Filter1" Height="30"
+		<Filter id="Filter1" Height="30" 
 						taskstate="opened" taskstateFilter="1" taskstateRange="1" taskstateShowMenu="0" taskstateButton="Defaults" taskstateDefaults="|*FilterOff|*RowsAll"
 						taskprocessname="PIM LAB - Création UC" taskprocessnameFilter="1" taskprocessnameShowMenu="0" taskprocessnameButton="Defaults" taskprocessnameDefaults="|*FilterOff|*RowsAll"
 						tasktargetdocumentjdefamilyRange="1" tasktargetdocumentjdefamilyShowMenu="0" tasktargetdocumentjdefamilyButton="Defaults" tasktargetdocumentjdefamilyDefaults="|*FilterOff|*RowsAll"

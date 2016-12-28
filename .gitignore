@@ -1,2 +1,3 @@
 node_modules
-MyWF*
+dist/*
+npm-debug.log

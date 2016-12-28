@@ -5,7 +5,8 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "build": "electron-packager  --all . MyWFDashboard"
+    "build": "electron-packager  --all . MyWFDashboard --out dist/",
+    "package": "electron-installer-windows --config installerconfig.json"
   },
   "repository": "https://github.com/nicolaschaillot/treegrid-electron",
   "keywords": [
@@ -19,6 +20,7 @@
   "license": "No license",
   "devDependencies": {
     "electron": "^1.4.13",
+    "electron-installer-windows": "^0.2.0",
     "electron-packager": "^8.4.0"
   }
 }

@@ -1,0 +1,7 @@
+{
+  "src": "dist/MyWFDashboard-win32-x64/",
+  "dest": "dist/installers/",
+  "options": {
+    "authors": ["Nicolas Chaillot"]
+  }
+}

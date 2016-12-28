@@ -1,0 +1,42 @@
+#myDashboard-caption {
+  padding: 0 0 10px 0;
+}
+#myDashboard-caption h1 {
+  font-size: 1em;
+  text-transform: uppercase;
+  color: #878787;
+}
+.caption {
+  font-size: 0.8em;
+  padding: 2px;
+  border-radius: 3px;
+  width: 60px;
+  text-align: center;
+}
+.caption-list {
+  list-style-type: none;
+  display: inline-flex;;
+}
+.caption-list li {
+  -webkit-margin-end: 10px;
+}
+.task-state {
+  font-weight: bold !important;
+  text-transform: uppercase !important;
+  color: #fff !important;
+}
+.opened {
+  background-color: #4a96f9 !important;
+}
+.ended {
+  background-color: #25db8c !important;
+}
+.cancelled {
+  background-color: #7e7e7f !important;
+}
+.overdue-task {
+  background-color: #ed560b !important;
+}
+.almost-overdue-task {
+  background-color: #edad0b !important;
+}

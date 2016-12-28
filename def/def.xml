@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Grid>
+
+	<Cfg NumberId="1" /><!-- Set to 1 for generate number ids -->
+	<Cfg IdChars="0123456789" /><!-- Accepted characters when generating new id -->
+	<Cfg NoHScroll="0" NoVScroll="1" MaxVScroll="900" SuppressCfg="0" Style="ExtJS" Editing="0" Deleting="0" FastColumns="1" /> <!-- removing MaxVScroll="500" for performances -->
+	<Cfg SafeCSS='1' />
+	<Cfg GroupSortMain="1" GroupRestoreSort="1"/>
+	<Cfg Group="tasktargetdocumentcode"/>
+	<Cfg Paging="2" AllPages="0" PageLength="50" MaxPages="20"/>
+	<Cfg PersistentCfg="1" />
+
+	<Head>
+		<Filter id="Filter1" Height="30"
+				taskstateRange="1" taskstateShowMenu="0" taskstateButton="Defaults" taskstateDefaults="|*FilterOff|*RowsAll"
+				tasktargetdocumenttradeunitRange="1" tasktargetdocumenttradeunitShowMenu="0" tasktargetdocumenttradeunitButton="Defaults" tasktargetdocumenttradeunitDefaults="|*FilterOff|*RowsAll"
+				tasktargetdocumentfamilyRange="1" tasktargetdocumentfamilyShowMenu="0" tasktargetdocumentfamilyButton="Defaults" tasktargetdocumentfamilyDefaults="|*FilterOff|*RowsAll"
+				tasktargetdocumentglnRange="1" tasktargetdocumentglnShowMenu="0" tasktargetdocumentglnButton="Defaults" tasktargetdocumentglnDefaults="|*FilterOff|*RowsAll"
+				taskstartdateRange="1" taskstartdateShowMenu="0" tasktargetdocumentglnButton="Defaults" tasktargetdocumentglnDefaults="|*FilterOff|*RowsAll"
+		/>
+		<I Calculated="1" Background="#777777" tasknameFormula="&quot;Nombre total de taches : &quot;+count()" tasknameHtmlPrefix="<div style='font-size: 1.2em; font-weight: bold; color: white;'>" tasknameHtmlPostfix="</div>"/>
+	</Head>
+
+	<Solid>
+		<Group Cells="List,Custom" ListWidth="165" ListCustom="unknown" List="|none|&lt;b&gt;Code article&lt;/b&gt;|&lt;b&gt;Workflow&lt;/b&gt;|&lt;b&gt;Tâche&lt;/b&gt;|&lt;b&gt;Intervenant&lt;/b&gt;" Cols="||tasktargetdocumentcode|taskprocessname|taskname|taskinitiatorname" />
+		<Tabber Cells="WF0,WF1,WF2,WF3"
+				WF0ButtonText="Tous les workflows" WF0OnCheck="Grid.SetFilter('taskprocessnameFilter');" WF0="1"
+				WF1ButtonText="CREATION" WF1OnCheck="Grid.FilterTextRange('taskprocessname','PIM LAB - Création UC','taskprocessnameFilter');"
+				WF2ButtonText="MODIFICATION" WF2OnCheck="Grid.FilterTextRange('taskprocessname','modificationWF','taskprocessnameFilter');"
+				WF3ButtonText="ARCHIVAGE" WF3OnCheck="Grid.FilterTextRange('taskprocessname','LFF_PIM_Archivage','taskprocessnameFilter');"/>
+	</Solid>
+
+	<Toolbar Styles='0'
+			 Cells='Reload,Repaint,Export,ExpandAll,CollapseAll,ZoomIn,ZoomOut,ZoomFit,Columns,Cfg'
+			 AddCopyMenu='' />
+
+	<LeftCols>
+		<C Name="tasktargetdocumentcode" Type="Text" Width="150" CanHide="0"/>
+	</LeftCols>
+
+	<Cols>
+		<!--<C Name='taskid' Type='Text' Hidden="1" Visible="0"/>-->
+		<C Name='taskname' Type='Text' Width="200"/>
+		<C Name='taskstate' Type='Text' ClassFormula="'task-state ' + getTaskStateStyleClass(Value, taskduedate)" />
+		<!--<C Name='tasktype' Type='Text' Hidden="1" Visible="0"/>-->
+		<!--<C Name='taskprocessid' Type='Text' Hidden="1" Visible="0"/>-->
+		<C Name='taskprocessname' Type='Text'/>
+		<C Name='taskactors' Type='Text'/>
+		<!--<C Name='taskinitiatorid' Type='Text' Hidden="1" Visible="0"/>-->
+		<!--<C Name='taskinitiatorname' Type='Text' Hidden="1" Visible="0"/>-->
+		<!--<C Name='tasktargetdocumentid' Type='Text' Hidden="1" Visible="0"/>-->
+		<C Name='tasktargetdocumentcode' Type='Text'/>
+		<C Name='tasktargetdocumentname' Type='Text'/>
+		<C Name='tasktargetdocumentgtin' Type='Text'/>
+		<C Name='tasktargetdocumentgln' Type='Text'/>
+		<C Name='tasktargetdocumenttradeunit' Type='Text'/>
+		<C Name='tasktargetdocumentjdefamily' Type='Text'/>
+		<C Name='tasktargetdocumentjdesubfamily' Type='Text'/>
+		<C Name='tasktargetdocumentjdetrademark' Type='Text'/>
+		<C Name='tasktargetdocumentjdesubtrademark' Type='Text'/>
+		<C Name='tasktargetdocumentjderayon' Type='Text'/>
+		<C Name='taskstartdate' Type='Date' Format="dd/MM/yyyy" Width="100"/>
+		<C Name='taskenddate' Type='Date' Format="dd/MM/yyyy" Width="100"/>
+		<C Name='taskduration' Type="Int" Width="100"/>
+		<C Name='taskduedate' Type='Date' Format="dd/MM/yyyy" Width="100"  />
+		<!-- 'delayed-task ' + Value -->
+	</Cols>
+
+	<Header taskname="Tache"
+			taskstate="Etat"
+			taskprocessname="Workflow"
+			taskactors="Intervenants"
+			taskinitiatorname="Intervenant"
+			tasktargetdocumentcode="Code article"
+			tasktargetdocumentname="Article"
+			tasktargetdocumentgtin="GTIN"
+			tasktargetdocumentgln="GLN"
+			tasktargetdocumenttradeunit="Unite commerciale"
+			tasktargetdocumentjdefamily="Famille"
+			tasktargetdocumentjdesubfamily="Sous-Famille"
+			tasktargetdocumentjdetrademark="Marque"
+			tasktargetdocumentjdesubtrademark="Sous-Marque"
+			tasktargetdocumentjderayon="Rayon"
+			taskstartdate="Date de creation"
+			taskenddate="Date de traitement"
+			taskduration="Duree de la tache"
+			taskduedate="Date de fin prevue"
+	/>
+
+	<Def>
+		<!-- Default row for group rows -->
+		<!-- tasktargetdocumentcodeFormula="&quot;count = &quot;+count()" -->
+		<D Name='Group' Height="30" Expanded="1" tasknameFormula="&quot;Nombre de taches : &quot;+count()" tasknameHtmlPrefix="<div style='padding-top: 5px; font-size: 1.2em; font-weight: bold;'>" tasknameHtmlPostfix="</div>" CalcOrder="taskname, tasknameHtmlPrefix" Calculated="1" />
+		<D Name="task"  taskdurationFormula="getDurationInDays(taskstartdate,taskenddate)" Calculated="1" CalcOrder="taskduration,taskstateClass" /> <!-- Calculated="1" CalcOrder="taskstate" taskstateBackground="#8F8"/>-->
+	</Def>
+
+</Grid>

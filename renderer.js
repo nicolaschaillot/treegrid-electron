@@ -1,14 +1,8 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Workflows management dashboard sample</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="treegrid/GridE.js"></script>
-  </head>
+// This file is required by the index.html file and will
+// be executed in the renderer process for that window.
+// All of the Node.js APIs are available in this process.
 
-  <script type="text/javascript">
-  var currentdate = new Date();
+var currentdate = new Date();
 
   // method to update the style of the taskstate column
   if (typeof (getTaskStateStyleClass) == "undefined") {
@@ -34,20 +28,3 @@
       return Math.trunc(duration);
     }
   }
-</script>
-
-  <body>
-
-    <!-- div style="width:1200px;height:715px;" id="divTata"-->
-    <div id="myDashboard">
-        <treegrid id="wftasks"
-                  Data_Url="./data/data.xml"
-                  Layout_Url="./def/def.xml"
-                  Text_Url="./treegrid/Text_fr.xml"
-                  >
-        </treegrid>
-    </div>
-
-  </body>
-
-</html>

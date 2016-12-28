@@ -1,0 +1,22 @@
+{
+  "name": "treegrid-electron",
+  "version": "0.0.1",
+  "description": "A minimal Workflows management dashboard application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": "https://github.com/nicolaschaillot/treegrid-electron",
+  "keywords": [
+    "treegrid",
+    "workflows",
+    "dashboard",
+    "management",
+    "demo"
+  ],
+  "author": "Nicolas Chaillot",
+  "license": "",
+  "devDependencies": {
+    "electron": "^1.4.13"
+  }
+}

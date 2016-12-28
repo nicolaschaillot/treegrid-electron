@@ -4,7 +4,8 @@
   "description": "A minimal Workflows management dashboard application",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "build": "electron-packager  --all . MyWFDashboard"
   },
   "repository": "https://github.com/nicolaschaillot/treegrid-electron",
   "keywords": [
@@ -15,8 +16,9 @@
     "demo"
   ],
   "author": "Nicolas Chaillot",
-  "license": "",
+  "license": "No license",
   "devDependencies": {
-    "electron": "^1.4.13"
+    "electron": "^1.4.13",
+    "electron-packager": "^8.4.0"
   }
 }

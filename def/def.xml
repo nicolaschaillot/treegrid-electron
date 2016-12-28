@@ -12,12 +12,16 @@
 
 	<Head>
 		<Filter id="Filter1" Height="30"
-				taskstate="opened" taskstateFilter="1" taskstateRange="1" taskstateShowMenu="0" taskstateButton="Defaults" taskstateDefaults="|*FilterOff|*RowsAll"
-				taskprocessname="PIM LAB - Création UC" taskprocessnameFilter="1" taskprocessnameShowMenu="0" taskprocessnameButton="Defaults" taskprocessnameDefaults="|*FilterOff|*RowsAll"
-				tasktargetdocumenttradeunitRange="1" tasktargetdocumenttradeunitShowMenu="0" tasktargetdocumenttradeunitButton="Defaults" tasktargetdocumenttradeunitDefaults="|*FilterOff|*RowsAll"
-				tasktargetdocumentfamilyRange="1" tasktargetdocumentfamilyShowMenu="0" tasktargetdocumentfamilyButton="Defaults" tasktargetdocumentfamilyDefaults="|*FilterOff|*RowsAll"
-				tasktargetdocumentglnRange="1" tasktargetdocumentglnShowMenu="0" tasktargetdocumentglnButton="Defaults" tasktargetdocumentglnDefaults="|*FilterOff|*RowsAll"
-				taskstartdateRange="1" taskstartdateShowMenu="0" tasktargetdocumentglnButton="Defaults" tasktargetdocumentglnDefaults="|*FilterOff|*RowsAll"
+						taskstate="opened" taskstateFilter="1" taskstateRange="1" taskstateShowMenu="0" taskstateButton="Defaults" taskstateDefaults="|*FilterOff|*RowsAll"
+						taskprocessname="PIM LAB - Création UC" taskprocessnameFilter="1" taskprocessnameShowMenu="0" taskprocessnameButton="Defaults" taskprocessnameDefaults="|*FilterOff|*RowsAll"
+						tasktargetdocumentjdefamilyRange="1" tasktargetdocumentjdefamilyShowMenu="0" tasktargetdocumentjdefamilyButton="Defaults" tasktargetdocumentjdefamilyDefaults="|*FilterOff|*RowsAll"
+						tasktargetdocumentjdesubfamilyRange="1" tasktargetdocumentjdesubfamilyShowMenu="0" tasktargetdocumentjdesubfamilyButton="Defaults" tasktargetdocumentjdesubfamilyDefaults="|*FilterOff|*RowsAll"
+						tasktargetdocumentjdetrademarkRange="1" tasktargetdocumentjdetrademarkShowMenu="0" tasktargetdocumentjdetrademarkButton="Defaults" tasktargetdocumentjdetrademarkDefaults="|*FilterOff|*RowsAll"
+						tasktargetdocumentjdesubtrademarkRange="1" tasktargetdocumentjdesubtrademarkShowMenu="0" tasktargetdocumentjdesubtrademarkButton="Defaults" tasktargetdocumentjdesubtrademarkDefaults="|*FilterOff|*RowsAll"
+						tasktargetdocumentjderayonRange="1" tasktargetdocumentjderayonShowMenu="0" tasktargetdocumentjderayonButton="Defaults" tasktargetdocumentjderayonDefaults="|*FilterOff|*RowsAll"
+						tasktargetdocumenttradeunitRange="1" tasktargetdocumenttradeunitShowMenu="0" tasktargetdocumenttradeunitButton="Defaults" tasktargetdocumenttradeunitDefaults="|*FilterOff|*RowsAll"
+						tasktargetdocumentfamilyRange="1" tasktargetdocumentfamilyShowMenu="0" tasktargetdocumentfamilyButton="Defaults" tasktargetdocumentfamilyDefaults="|*FilterOff|*RowsAll"
+						tasktargetdocumentglnRange="1" tasktargetdocumentglnShowMenu="0" tasktargetdocumentglnButton="Defaults" tasktargetdocumentglnDefaults="|*FilterOff|*RowsAll"
 		/>
 		<I Calculated="1" Background="#777777" tasknameFormula="&quot;Nombre total de taches : &quot;+count()" tasknameHtmlPrefix="<div style='font-size: 1.2em; font-weight: bold; color: white;'>" tasknameHtmlPostfix="</div>"/>
 	</Head>

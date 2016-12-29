@@ -5,7 +5,8 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "build": "electron-packager  --all . MyWFDashboard --out dist/"
+    "build": "electron-packager  --all . MyWFDashboard --out dist/",
+    "create-installer-win": "node installers/windows/createinstaller.js"
   },
   "repository": "https://github.com/nicolaschaillot/treegrid-electron",
   "keywords": [

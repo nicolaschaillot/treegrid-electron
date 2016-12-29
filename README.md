@@ -12,12 +12,12 @@
 npm run start
 ```
 
-## Build apps
+## Build apps multi OS
 ```bash
 npm run build
 ```
 
-## Create win installer
+## Create windows installer x64
 ```bash
-npm run package
+npm run create-installer-win
 ```

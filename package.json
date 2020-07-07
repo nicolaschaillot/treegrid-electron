@@ -19,7 +19,7 @@
   "author": "Nicolas Chaillot",
   "license": "No license",
   "devDependencies": {
-    "electron": "^1.4.13",
+    "electron": "^9.1.0",
     "electron-packager": "^8.4.0",
     "electron-winstaller": "^2.5.1"
   }
